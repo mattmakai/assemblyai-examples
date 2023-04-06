@@ -71,6 +71,7 @@ async def send_receive():
                                        exception_on_overflow=False)
                     data = base64.b64encode(data).decode("utf-8")
                     json_data = json.dumps({"audio_data":str(data)})
+                    print(json_data)
                     await _ws.send(json_data)
                 except websockets.exceptions.ConnectionClosedError as e:
                     print(e)
@@ -89,6 +90,7 @@ async def send_receive():
 
                 try:
                     result_str = await _ws.recv()
+                    print(result_str)
                     result = json.loads(result_str)
                     prompt = result['text']
                     print(prompt, end="\r")
