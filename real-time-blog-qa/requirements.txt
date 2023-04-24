@@ -1,0 +1,4 @@
+tiktoken
+openai
+redis
+langchain
