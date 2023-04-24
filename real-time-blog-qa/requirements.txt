@@ -2,3 +2,6 @@ tiktoken
 openai
 redis
 langchain
+numpy
+websocket
+requests
